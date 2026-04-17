@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+class Employee
+{
+public:
+{
+Employee()
+cout<<"Default Constructor Invoked"<<endl;
+}
+};
+int main(void)
+{
+Employee e1; //creating an object of Employee
+Employee e2;
+return 0;
+}
+Output:
+Default Constructor Invoked
+Default Constructor Invoked
+C++ Parameterized Constructor
+A constructor which has parameters is called parameterized constructor. It is used to provide
+different values to distinct objects.
+Let's see the simple example of C++ Parameterized Constructor.
+#include <iostream>
+using namespace std;
+class Employee {
+public:
+int id;//data member (also instance variable)
+string name;//data member(also instance variable)
+float salary;
+Employee(int i, string n, float s)
+{
+id = i;
+name = n;
+salary = s;
+}
+void display()
+{
+cout<<id<<" "<<name<<" "<<salary<<endl;
+}
+};
+int main(void) {
+Employee e1 =Employee(101, "Sonoo", 890000); //creating an object of Employee
+Employee e2=Employee(102, "Nakul", 59000);
+e1.display();
+e2.display();
+return 0;
+}
+Output:
+101 Sonoo 890000
+102 Nakul 59000
+C++ Copy Constructor
+A Copy constructor is an overloaded constructor used to declare and initialize an object from
+another object.
+Copy Constructor is of two types:
+Default Copy constructor: The compiler defines the default copy constructor. If the user defines
+no copy constructor, compiler supplies its constructor.
+User Defined constructor: The programmer defines the user-defined constructor.
+C++ Copy Constructor
+Syntax Of User-defined Copy Constructor:
+Class_name(const class_name &old_object);
+Consider the following situation:
+class A
+{
+A(A &x) // copy constructor.
+{
+// copyconstructor.
+}
+}
+In the above case, copy constructor can be called in the following ways:
+C++ Copy Constructor
+Let's see a simple example of the copy constructor.
+// program of the copy constructor.
+#include <iostream>
+using namespace std;
+class A
+{
+public:
+int x;
+A(int a) // parameterized constructor.
+{
+x=a;
+A(A &i) // copy constructor
+}
+{
+x = i.x;
+}
+};
+int main()
+{
+A a1(20); // Calling the parameterized constructor.
+A a2(a1); // Calling the copy constructor.
+cout<<a2.x;
+return 0;
+}
