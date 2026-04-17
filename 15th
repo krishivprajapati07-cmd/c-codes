@@ -1,0 +1,80 @@
+public class ArithmeticOperations {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter first number: ");
+double num1 = sc.nextDouble();
+System.out.print("Enter second number: ");
+double num2 = sc.nextDouble();
+// Addition
+double sum = num1 + num2;
+// Subtraction
+double diff = num1 - num2;
+// Multiplication
+double prod = num1 * num2;
+// Division
+double div = 0;
+if (num2 != 0) {
+div = num1 / num2;
+} else {
+System.out.println("Warning: Division by zero is not allowed!");
+}
+// Modulus
+double mod = 0;
+if (num2 != 0) {
+mod = num1 % num2;
+}
+System.out.println("\n--- Arithmetic Operations ---");
+System.out.println("Addition : " + sum);
+System.out.println("Subtraction : " + diff);
+System.out.println("Multiplication : " + prod);
+if (num2 != 0) {
+System.out.println("Division : " + div);
+System.out.println("Modulus : " + mod);
+}
+sc.close();
+}
+}
+Java Output
+Enter first number: 12
+Enter second number: 5
+--- Arithmetic Operations ---
+Addition : 17.0
+Subtraction : 7.0
+Multiplication : 60.0
+Division : 2.4
+Modulus : 2.0
+3. Python Program for Arithmetic Operations
+# Read two numbers from user
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+# Addition
+sum_result = num1 + num2
+# Subtraction
+diff_result = num1 - num2
+# Multiplication
+prod_result = num1 * num2
+# Division
+if num2 != 0:
+div_result = num1 / num2
+mod_result = num1 % num2
+else:
+div_result = None
+mod_result = None
+print("Warning: Division by zero is not allowed!")
+# Display results
+print("\n--- Arithmetic Operations ---")
+print("Addition :", sum_result)
+print("Subtraction :", diff_result)
+print("Multiplication :", prod_result)
+if div_result is not None:
+print("Division :", div_result)
+print("Modulus :", mod_result)
+Python Output
+Enter first number: 12
+Enter second number: 5
+--- Arithmetic Operations ---
+Addition : 17.0
+Subtraction : 7.0
+Multiplication : 60.0
+Division : 2.4
+Modulus : 2.0
